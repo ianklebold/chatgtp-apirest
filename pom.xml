@@ -8,11 +8,11 @@
         <version>2.7.10</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.ianjedi.chatgtp</groupId>
-    <artifactId>chatgtp-apirest</artifactId>
+    <groupId>com.ianjedi.chatgpt</groupId>
+    <artifactId>chatgpt-apirest</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>chatgtp-apirest</name>
-    <description>chatgtp-apirest</description>
+    <name>chatgpt-apirest</name>
+    <description>chatgpt-apirest</description>
     <properties>
         <java.version>17</java.version>
     </properties>
@@ -38,6 +38,13 @@
             <artifactId>chatgpt-spring-boot-starter</artifactId>
             <version>1.0.3</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+
 
     </dependencies>
 

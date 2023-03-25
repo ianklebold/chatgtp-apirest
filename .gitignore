@@ -31,3 +31,8 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### CHAT GPT ###
+/src/main/resources/secrets.propertiessecrets.properties
+secrets.properties
+secrets.properties
