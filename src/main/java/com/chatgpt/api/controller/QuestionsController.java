@@ -5,10 +5,7 @@ import io.github.flashvayne.chatgpt.dto.image.ImageSize;
 import io.github.flashvayne.chatgpt.service.ChatgptService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -25,6 +22,10 @@ public class QuestionsController {
 
     private static final String CHATGPT_RIGTHS = "api/v1/rigths";
 
+    @GetMapping(value = CHATGPT_RIGTHS)
+    public String sendSimpleMessage(){
+        return "CHAT GPT DEPENDENCY : https://github.com/flashvayne/chatgpt-spring-boot-starter";
+    }
     @PostMapping(value = CHATGPT_QUESTION_PATH)
     public String sendSimpleMessage(@RequestBody String message){
         return chatgptService.sendMessage(message);
@@ -34,6 +35,7 @@ public class QuestionsController {
     public List<String> sendSimpleMessageGenerateImage(@RequestBody String message,
                                                        @RequestParam(required = false,name = "size") ImageSize size,
                                                        @RequestParam(required = false,name = "quantity") int quantity){
+
         return  chatgptService.imageGenerate(message,quantity,size, ImageFormat.URL);
     }
 
