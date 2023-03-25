@@ -33,6 +33,6 @@ build/
 .vscode/
 
 ### CHAT GPT ###
-/src/main/resources/secrets.propertiessecrets.properties
-secrets.properties
+/src/main/resources/templates/
+
 secrets.properties
